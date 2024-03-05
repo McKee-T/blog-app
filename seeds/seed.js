@@ -2,30 +2,30 @@ const sequelize = require('../config/connection');
 const { User, Post, Comment } = require('../models');
 
 const seedDatabase = async () => {
-  await sequelize.sync({ force: true }); // WARNING: This will DROP your database tables and recreate them
+  await sequelize.sync({ force: true }); 
 
   // Seed Users
   await User.bulkCreate([
-    { username: 'user1', password: 'password123' },
-    { username: 'user2', password: 'password123' }
-    // Add more users as needed
+    { username: 'MRVNx', password: 'password123' },
+    { username: 'SneezingTurtle', password: 'password123' }
+   
   ]);
 
   // Seed Posts
   await Post.bulkCreate([
-    { title: 'First Post', content: 'This is the first post.', userId: 1 },
-    { title: 'Second Post', content: 'This is the second post.', userId: 2 }
-    // Add more posts as needed
+    { title: 'Welcome!', content: 'Hello everyone, and welcome to MyFirstBlog!  Im excited to get this website up and running, and I hope you find it as useful as I do.', userId: 1 },
+    { title: 'Howdy yall!', content: 'Im new here and wanted to test out the post functionality of the website.  Hopefully this will show up so I know I am doing this right.', userId: 2 }
+
   ]);
 
   // Seed Comments
   await Comment.bulkCreate([
-    { commentText: 'Great post!', userId: 2, postId: 1 },
-    { commentText: 'Thanks for sharing.', userId: 1, postId: 2 }
-    // Add more comments as needed
+    { commentText: 'The site looks great, good job!', userId: 2, postId: 1 },
+    { commentText: 'We can see it, so you did something right!', userId: 1, postId: 2 }
+    
   ]);
 
-  process.exit(0); // Exit the process when done
+  process.exit(0); 
 };
 
 seedDatabase();

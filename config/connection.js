@@ -1,5 +1,5 @@
 const Sequelize = require('sequelize');
-require('dotenv').config(); // Ensure you have dotenv installed and a .env file at your project root if you're using environment variables locally
+require('dotenv').config(); 
 
 let sequelize;
 
