@@ -1,13 +1,15 @@
 <div class="post-block">
-    <a href="/post/{{id}}"></a>
-  <h2 class="post-title">{{title}}</h2>
-  <p class="post-content">{{content}}</p>
-  <!-- Assuming you'll pass the user object when rendering the post -->
-  <p class="post-author">Posted by {{user.username}} on {{formatDate post.createdAt "MMMM Do YYYY, h:mm:ss a"}}</p>
-  <!-- Check if the current user owns the post for edit/delete options -->
-  {{#if ownPost}}
-  <button class="delete-post-btn" data-id="{{id}}">Delete Post</button>
-  <button class="edit-post-btn" data-id="{{id}}">Edit Post</button>
-  {{/if}}
-  </a>
+  <div class="post-header">
+    <!-- Wrap the title in an anchor tag to make it clickable -->
+    <a href="/post/{{id}}" class="post-title-link"><h2 class="post-title">{{title}}</h2></a>
+  </div>
+  <div class="post-body">
+    <p class="post-content">{{content}}</p>
+    <p class="post-author">Posted by {{user.username}} on {{formatDate createdAt "MMMM Do YYYY, h:mm:ss a"}}</p>
+    <!-- Check if the current user owns the post for edit/delete options -->
+    {{#if ownPost}}
+      <button class="delete-post-btn" data-id="{{id}}">Delete Post</button>
+      <button class="edit-post-btn" data-id="{{id}}">Edit Post</button>
+    {{/if}}
+  </div>
 </div>

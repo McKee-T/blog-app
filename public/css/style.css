@@ -1,30 +1,168 @@
 body {
-    background-color: #a08cd8; /* Replace with your desired background color */
+    background-color: #a7a5ad; /* Replace with your desired background color */
     margin: 0;
     padding: 0;
     font-family: Arial, sans-serif; /* Example font, replace with your choice */
   }
   
   nav {
-    background-color: #4a1b75; /* Ensure this matches the body's background color */
-    padding: 10px 0; /* Example padding, adjust as needed */
+    display: flex; /* Use flexbox to align the title and the nav items */
+    align-items: center; /* Vertically center the items in the navbar */
+    background-color: #000000; /* Adjust the background color as needed */
+    padding: 10px; /* Adjust padding as needed */
+  }
+  
+  .navbar-title {
+    flex-grow: 1; /* Allows the title to take up the space on the left */
+    color: #fff; /* Adjust text color as needed */
+    font-size: 24px; /* Adjust font size as needed */
+    font-weight: bold; /* Makes the title bold */
+    margin-right: auto; /* Pushes the nav items to the right */
   }
   
   nav ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
     display: flex;
-    justify-content: center; /* Center the navigation items */
+    list-style: none;
+    margin: 0;
+    padding: 0;
   }
   
   nav ul li {
-    margin: 0 15px; /* Spacing between navigation items */
+    margin: 0 10px; /* Adjust spacing between nav items as needed */
   }
   
   nav ul li a {
     text-decoration: none;
-    color: #f7f6f6; /* Example text color, adjust as needed */
-    font-weight: bold;
+    color: #fff; /* Adjust link color as needed */
   }
   
+  .post-block {
+    border: 2px solid #000000; /* Adjust color as needed */
+    border-radius: 5px; /* Optional: adds rounded corners */
+    margin: 20px auto; /* Centers the block and adds vertical spacing */
+    width: 80%; /* Adjust width as needed */
+    background-color: #f7f6f6; /* Light background for the post block */
+  }
+  
+  .post-header {
+    background-color: #000000; /* Background color for the header */
+    color: #f7f6f6; /* Text color for the header */
+    padding: 10px; /* Adds some padding inside the header */
+    border-radius: 3px 3px 0 0; /* Rounds the top corners to match the post block */
+  }
+  
+  .post-content {
+    padding: 15px; /* Adds padding inside the content area */
+  }
+
+  /* Target the title input field */
+.post-title-input {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  /* Target the content textarea field */
+  .post-content-textarea {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    height: 150px;
+  }
+  
+  /* Target the submit button */
+  .submit-post-btn {
+    background-color: #4CAF50; /* Green background */
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+
+  /* General styles for form elements */
+form {
+    display: flex;
+    flex-direction: column;
+    width: 100%; /* Adjust width as needed */
+    max-width: 400px; /* Maximum width of the form */
+    margin: 0 auto; /* Center the form horizontally */
+    padding: 20px;
+  }
+  
+  /* Style for input fields */
+  .user-input,
+  .password-input,
+  .signup-input { /* Add .signup-input if used in the signup form */
+    padding: 10px;
+    margin-bottom: 15px; /* Space between fields */
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  /* Style for buttons */
+  .login-btn,
+  .signup-btn { /* Add .signup-btn if used in the signup form */
+    padding: 10px;
+    background-color: #007bff; /* Example green background */
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .login-btn:hover,
+  .signup-btn:hover {
+    background-color: #0056b3; /* Darker green on hover */
+  }
+  
+  /* Style for the "Create an account" link */
+  form a {
+    display: block;
+    margin-top: 15px; /* Space above the link */
+    text-align: center;
+    color: #007bff; /* Example blue color for the link */
+    text-decoration: none;
+  }
+  
+  form a:hover {
+    text-decoration: underline;
+  }
+
+  /* Style for all input fields in the form */
+.email-input,
+.confirm-email,
+.username-input,
+.pass-input,
+.confirm-pass {
+  display: block; /* Make each input take up its own line */
+  width: calc(100% - 20px); /* Adjust width to fit the form, accounting for padding */
+  margin: 10px auto; /* Center the input fields and add vertical spacing */
+  padding: 10px; /* Add some padding inside the input fields */
+  border: 1px solid #ccc; /* A light border for the inputs */
+  border-radius: 5px; /* Rounded corners for the inputs */
+}
+
+/* Style for the create account button */
+.create-account-btn {
+  display: block; /* Make the button take up its own line */
+  width: 50%; /* Adjust width as needed */
+  margin: 20px auto; /* Center the button and add vertical spacing above */
+  padding: 10px; /* Add some padding inside the button */
+  background-color: #007bff; /* Example blue background color */
+  color: white; /* Text color */
+  border: none; /* No border */
+  border-radius: 5px; /* Rounded corners */
+  cursor: pointer; /* Change cursor to pointer when hovering over the button */
+  transition: background-color 0.3s; /* Smooth transition for hover effect */
+}
+
+/* Hover effect for the button */
+.create-account-btn:hover {
+  background-color: #0056b3; /* Darker shade of blue when hovering */
+}

@@ -9,8 +9,8 @@
 {{!-- Post creation form, initially hidden --}}
 <div id="postForm" style="display:none;">
   <form method="POST" action="/api/posts">
-    <input type="text" name="title" placeholder="Title" required>
-    <textarea name="content" placeholder="Body" rows="4" required></textarea>
-    <button type="submit">Submit Post</button>
+    <input type="text" name="title" class="post-title-input" placeholder="Title" required>
+    <textarea name="content" class="post-content-textarea" placeholder="Body" rows="4" required></textarea>
+    <button type="submit" class="submit-post-btn">Submit Post</button>
   </form>
 </div>
