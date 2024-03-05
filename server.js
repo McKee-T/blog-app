@@ -2,9 +2,14 @@ const express = require('express');
 const session = require('express-session');
 const { engine } = require('express-handlebars');
 const moment = require('moment');
-const routes = require('./controllers');  // This imports routes from controllers/index.js
+const routes = require('./controllers');
 const sequelize = require('./config/connection');
 const SequelizeStore = require('connect-session-sequelize')(session.Store);
+
+// Conditionally load dotenv when not in production
+if (process.env.NODE_ENV !== 'production') {
+  require('dotenv').config();
+}
 
 const app = express();
 const PORT = process.env.PORT || 3000;
