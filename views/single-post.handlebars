@@ -1,0 +1,22 @@
+<div class="single-post">
+  <h2>{{post.title}}</h2>
+  <p>{{post.content}}</p>
+  <p>Posted by {{post.user.username}} on {{formatDate post.createdAt "MMMM Do YYYY, h:mm:ss a"}}</p>
+
+  {{#if loggedIn}}
+    <form method="POST" action="/api/comments">
+      <input type="hidden" name="postId" value="{{post.id}}">
+      <textarea name="commentText" placeholder="Leave a comment..." required></textarea>
+      <button type="submit">Submit Comment</button>
+    </form>
+  {{/if}}
+
+  <div class="comments">
+    {{#each post.comments as |comment|}}
+      <div class="comment">
+        <p>{{comment.commentText}}</p>
+        <p>Comment by {{comment.user.username}} on {{formatDate comment.createdAt "MMMM Do YYYY, h:mm:ss a"}}</p>
+      </div>
+    {{/each}}
+  </div>
+</div>

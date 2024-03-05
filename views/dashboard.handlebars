@@ -1,0 +1,16 @@
+<div class="dashboard">
+    <h1>Dashboard</h1>
+    {{#each posts as |post|}}
+        {{> post/post-block post ownPost=true}}
+    {{else}}
+        <p>You haven't created any posts yet.</p>
+    {{/each}}
+    <button id="createPostButton">New Post</button>
+{{!-- Post creation form, initially hidden --}}
+<div id="postForm" style="display:none;">
+  <form method="POST" action="/api/posts">
+    <input type="text" name="title" placeholder="Title" required>
+    <textarea name="content" placeholder="Body" rows="4" required></textarea>
+    <button type="submit">Submit Post</button>
+  </form>
+</div>

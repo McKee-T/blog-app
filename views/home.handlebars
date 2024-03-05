@@ -1,0 +1,7 @@
+<div class="homepage">
+    {{#each posts as |post|}}
+        {{> post/post-block post}}
+    {{else}}
+        <p>No posts to display.</p>
+    {{/each}}
+</div>
