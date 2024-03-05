@@ -3,7 +3,7 @@ const session = require('express-session');
 const { engine } = require('express-handlebars');
 const moment = require('moment');
 const routes = require('./controllers');
-const sequelize = require('./config/connection');
+const sequelize = require('./config/connection'); 
 const SequelizeStore = require('connect-session-sequelize')(session.Store);
 
 // Conditionally load dotenv when not in production
@@ -40,7 +40,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(express.static('public'));
 
-app.use(routes);  // This applies all routes defined in controllers/index.js
+app.use(routes);  
 
 sequelize.sync({ force: false }).then(() => {
   app.listen(PORT, () => console.log('Now listening on http://localhost:' + PORT));
