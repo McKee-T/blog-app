@@ -6,6 +6,11 @@
 
 MyFirstBlog is a dynamic online blogging platform where users can sign up, create blog posts, and interact with the community by leaving comments on posts. It leverages a MySQL database to store user data, posts, and comments securely, with bcrypt for hashing passwords to enhance security. This application follows the MVC paradigm and uses Handlebars.js for templating, Sequelize as the ORM, and express-session for session management.
 
+![blog1](https://github.com/McKee-T/blog-app/assets/144379790/28ac6fca-e8a1-40d7-9c1a-fc3fb6e939b1)
+![blog2](https://github.com/McKee-T/blog-app/assets/144379790/ff0d6732-856e-4e4a-8a65-cff7f85a37fd)
+![blog3](https://github.com/McKee-T/blog-app/assets/144379790/381cc269-b0fb-4415-b89c-453bb67356da)
+![blog4](https://github.com/McKee-T/blog-app/assets/144379790/20685a45-cf44-4670-9af7-b7e7032e77a3)
+
 ## Table of Contents
 
 - [Features](#features)
